@@ -1,4 +1,6 @@
 var lectureDisplay = document.getElementById("demo");
+var lecturerDisplay = document.getElementById("demo2");
+var classroomDisplay = document.getElementById("demo3");
 var counter = 0;
 
 
@@ -21,7 +23,9 @@ var lectures  = [
 ]
 
 function displayLectureTitle(){
-    lectureDisplay.innerHTML = lectures[counter].lectureTitle;
+    lectureDisplay.innerHTML = "Paskaita: " + lectures[counter].lectureTitle;
+    lecturerDisplay.innerHTML = "Destytojas: " + lectures[counter].lecturerName;
+    classroomDisplay.innerHTML = "Auditorija: " + lectures[counter].classroom;
     counter++;
     if(counter>=lectures.length){
     counter = 0;
